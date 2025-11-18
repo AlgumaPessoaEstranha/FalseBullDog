@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="Logo.png">
+    <title>Bulldog</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+
+            background-image: url("fundo.png");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            text-align: center;
+        }
+
+        .code {
+            padding: 12px 24px;
+            background-color: rgb(35, 2, 0);
+            color: rgb(255, 183, 134);
+            border: none;
+            border-radius: 30px;
+            font-size: 18px;
+            cursor: pointer;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            margin: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Faça seu pedido aqui!</h1>
+
+    <button id="btn1" class="code">Cachorro quente (sem estoque)</button>
+    <button id="btn2" class="code">Água com gás</button>  
+    <button id="btn3" class="code">Água sem gás</button> 
+
+    <h1> --------------------------- </h1>
+
+    <button id="btn4" class ="code">Pagar</button>
+    <button id="btn5" class="code">Esvaziar o carrinho</button>
+
+    <script>
+
+        var preço = 1
+        var preço2 = 1
+        var preço3 = 3
+
+        document.getElementById("btn2").onclick = function () {
+            alert("O Pedido feito!");
+            preço = 0
+            preço2 = 0
+        }
+
+        document.getElementById("btn3").onclick = function () {
+            alert("O Pedido feito!");
+            preço = 0
+            preço3 = 0
+        }
+
+        document.getElementById("btn1").onclick = function () {
+            alert("Sem estoque!");
+        }
+        document.getElementById("btn4").onclick = function () {
+
+            if ( preço2 == 0 && preço3 == 0 ) {
+                preço = 3
+            }
+
+            if ( preço == 0 ){
+                alert ("Custo: Nota 2.5")
+            }
+            else if (preço = 3) {
+                alert ("Custo: nota 4")
+            }
+            else
+            {
+                alert ("Nada foi comprado")
+            }
+        }
+        document.getElementById("btn5").onclick = function () {
+            preço = 1
+            preço2 = 1
+            preço3 = 1
+            alert ("Carrinho esvaziado!")
+        }
+    </script>
+</body>
+</html>
